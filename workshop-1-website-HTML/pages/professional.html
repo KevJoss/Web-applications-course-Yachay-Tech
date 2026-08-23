@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Research and Professional Work</title>
+</head>
+
+<body>
+    <header>
+        <h1>Research and Professional Work</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">Return to home</a>
+    </nav>
+
+    <main>
+        <p>
+            This page describes the research project I am currently working on and the
+            professional roles where I apply what I learn.
+        </p>
+
+        <section>
+            <h2>Research</h2>
+
+            <article>
+                <h3>Paper Title: "When the Teacher Is the Worst Student: Source Selection Failure in Expert-Free Online
+                    Transfer
+                    Learning Beyond Its Validated Regime"</h3>
+
+                <p>
+                    A reproducibility study of the Expert-Free Online Transfer Learning
+                    (EF-OnTL) algorithm, extended to a new and more complex environment.
+                </p>
+
+                <dl>
+                    <dt>Algorithm</dt>
+                    <dd>Expert-Free Online Transfer Learning (EF-OnTL)</dd>
+
+                    <dt>Baseline</dt>
+                    <dd>
+                        A 2025 doctoral thesis evaluating EF-OnTL across several environments, you can find the
+                        doctoral thesis here:
+                        <a href="https://arxiv.org/abs/2501.15495">Expert-Free Online Transfer Learning</a>
+                    </dd>
+
+                    <dt>New environment</dt>
+                    <dd>Pac-Man, simulated as a multi-agent setting with five concurrent agents</dd>
+
+                    <dt>Status</dt>
+                    <dd>In progress, close to completion</dd>
+                </dl>
+
+                <h4>Background</h4>
+                <p>
+                    The baseline thesis evaluates EF-OnTL under a teacher-student framework.
+                    Neither Cart-Pole nor Pac-Man is natively multi-agent, so a multi-agent
+                    setting is simulated by running several parallel instances that exchange
+                    knowledge during training. In the original work this was done with five
+                    parallel instances of Cart-Pole.
+                </p>
+
+                <h4>My contribution</h4>
+                <ol>
+                    <li>
+                        Reimplementing the original work to test whether the result can
+                        still be reproduced on commodity hardware.
+                    </li>
+                    <li>
+                        Extending the evaluation to Pac-Man, a non-native multi-agent
+                        environment that is substantially more complex than Cart-Pole.
+                    </li>
+                </ol>
+
+                <h4>Research questions</h4>
+                <ul>
+                    <li>If the configuration used by the author is transferred to a more complex, non-native multi-agent
+                        system, are there any obvious changes?</li>
+                    <li>Is commodity hardware sufficient, or does the method assume a research cluster?</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <article>
+                <h3>AI and Data Analytics Intern &mdash; StrategIA</h3>
+                <p>
+                    My current role. I build multi-agent systems and apply AI tooling to
+                    real business problems, working on data analysis and on deploying
+                    agentic systems in controlled environments.
+                </p>
+                <h4>What I work with</h4>
+                <ul>
+                    <li>Multi-agent system design and orchestration</li>
+                    <li>LLM APIs from providers such as OpenAI and Anthropic</li>
+                    <li>NVIDIA's Nemoclaw Guardrails, for running agentic systems under safety constraints</li>
+                    <li>Data analysis in support of business decisions</li>
+                    <li>Nemotron and Cosmos models, from NVIDIA</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Odoo ERP Developer &mdash; Previous Role</h3>
+                <p>
+                    Before moving into AI work I developed custom modules for Odoo ERP
+                    systems already running in production for external clients.
+                </p>
+                <h4>What I worked with</h4>
+                <ul>
+                    <li>Python, for module business logic</li>
+                    <li>OWL, the JavaScript framework built into Odoo</li>
+                    <li>SQL and Odoo's ORM, to model how client data relates</li>
+                    <li>Git and GitHub for version control</li>
+                    <li>Basic server administration for deployment environments</li>
+                </ul>
+                <p>
+                    You can find more detail about both roles on my
+                    <a href="https://www.linkedin.com/in/kevin-sanchez-josue/" target="_blank" rel="noopener">LinkedIn
+                        profile</a>.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Kevin Sanchez in Ecuador on August 2026</p>
+    </footer>
+</body>
+
+</html>
