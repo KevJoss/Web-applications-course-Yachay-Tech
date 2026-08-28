@@ -1,0 +1,419 @@
+/* Professional Page Layout */
+.professional-container {
+    max-width: 1050px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* Header Section */
+.professional-header {
+    margin-bottom: 3.5rem;
+}
+
+.page-subtitle {
+    color: var(--accent-color, #6e06f2);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1.5rem;
+    font-family: "Oswald", sans-serif;
+}
+
+.page-title {
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: var(--primary-text, #1f2329);
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+    line-height: 1.1;
+}
+
+.page-title span {
+    color: var(--accent-color, #6e06f2);
+}
+
+.lead-text {
+    font-size: 1.2rem;
+    color: var(--secondary-text, #555555);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0;
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 4.5rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary-text, #1f2329);
+    margin: 0 0 2.5rem 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bullet {
+    color: var(--accent-color, #6e06f2);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Research Group Card */
+.research-group-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #f8f9fc;
+    border: 1px solid #e9ecef;
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.group-logo-container {
+    width: 85px;
+    height: 85px;
+    min-width: 85px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.group-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.group-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+.group-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--primary-text, #1f2329);
+    margin: 0.2rem 0;
+    text-align: left;
+}
+
+.group-description {
+    font-size: 0.98rem;
+    color: var(--secondary-text, #555555);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.group-description a {
+    color: var(--accent-color, #6e06f2);
+    text-decoration: none;
+}
+
+.group-description a:hover {
+    text-decoration: underline;
+}
+
+/* Timeline Layout */
+.timeline-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.timeline-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    font-family: "Oswald", sans-serif;
+}
+
+.badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.badge-purple {
+    color: #6e06f2;
+    background-color: #f1e8ff;
+}
+
+.badge-gray {
+    color: #666666;
+    background-color: #eeeeee;
+}
+
+.timeline-year {
+    font-size: 0.9rem;
+    color: #777777;
+    font-weight: 400;
+}
+
+.company-logo-box {
+    width: 85px;
+    height: 85px;
+    min-width: 85px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    overflow: hidden;
+    margin-top: 0.8rem;
+}
+
+.company-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.timeline-content {
+    padding-left: 2.5rem;
+    border-left: 1px solid #eaeaea;
+}
+
+.item-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--primary-text, #1f2329);
+    line-height: 1.4;
+    margin: 0 0 0.8rem 0;
+    text-align: left;
+}
+
+.company-name {
+    color: #777777;
+    font-weight: 400;
+}
+
+.item-subtitle {
+    font-size: 1.05rem;
+    color: var(--secondary-text, #555555);
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+}
+
+/* Summary Table */
+.summary-table {
+    background-color: #f8f9fc;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    padding: 1rem 1.4rem;
+    border-bottom: 1px solid #edf0f5;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8892b0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+}
+
+.table-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary-text, #1f2329);
+}
+
+.accent-link {
+    color: var(--accent-color, #6e06f2);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.accent-link:hover {
+    opacity: 0.85;
+}
+
+/* Side-by-Side Cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-card {
+    background-color: #f8f9fc;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8892b0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.card-list {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: var(--secondary-text, #555555);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.card-list li {
+    margin-bottom: 0.8rem;
+}
+
+.card-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Paragraphs & Subtexts */
+.note-text {
+    font-size: 0.92rem;
+    color: #777777;
+    line-height: 1.65;
+    margin-top: 1.5rem;
+}
+
+.link-subtext {
+    font-size: 0.95rem;
+    color: var(--secondary-text, #555555);
+    margin-top: 1.5rem;
+}
+
+/* Tags Container */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.tag {
+    background-color: #f5f6fa;
+    color: #2d3748;
+    padding: 0.55rem 1.1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    border-color: var(--accent-color, #6e06f2);
+    color: var(--accent-color, #6e06f2);
+    background-color: #ffffff;
+}
+
+/* Footer Navigation */
+.next-page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.5rem;
+    border-top: 1px solid #eaeaea;
+    margin-top: 4rem;
+}
+
+.next-caption {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #8892b0;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 0.3rem;
+    font-family: "Oswald", sans-serif;
+}
+
+.next-link {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary-text, #1f2329);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.next-link:hover {
+    color: var(--accent-color, #6e06f2);
+}
+
+.next-button {
+    background-color: var(--accent-color, #6e06f2);
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.next-button:hover {
+    background-color: #5904c4;
+    transform: translateY(-2px);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 820px) {
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .timeline-content {
+        padding-left: 0;
+        border-left: none;
+        padding-top: 1.5rem;
+        border-top: 1px solid #eaeaea;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .table-row {
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+    }
+
+    .page-title {
+        font-size: 2.8rem;
+    }
+}

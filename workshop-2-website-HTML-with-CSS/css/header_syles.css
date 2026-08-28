@@ -1,0 +1,64 @@
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-name {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--primary-text);
+}
+
+.logo-name::after {
+    content: '.';
+    color: var(--accent-color);
+}
+
+.navigation-bar ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    color: var(--secondary-text);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navigation-bar a:hover,
+.navigation-bar .current-page a {
+    color: var(--accent-color);
+}
+
+.navigation-bar a:hover {
+    text-decoration: underline;
+}
+
+header .icon-link {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+
+header .icon-link:hover {
+    transform: scale(1.2);
+}
