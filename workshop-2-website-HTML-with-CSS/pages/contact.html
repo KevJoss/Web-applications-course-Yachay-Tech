@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="preload" href="../css/main_styles.css" as="style">
+    <link href="../css/main_styles.css" rel="stylesheet">
+    <link rel="preload" href="../css/header_syles.css" as="style">
+    <link href="../css/header_syles.css" rel="stylesheet">
+    <link rel="preload" href="../css/contact_styles.css" as="style">
+    <link rel="stylesheet" href="../css/contact_styles.css">
+    <title>Contact | KevJoss</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-name">KevJoss</div>
+
+        <nav class="navigation-bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="professional.html">Professional</a></li>
+                <li><a href="extracurricular.html">Extracurricular</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li class="current-page"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <div class="contact-grid">
+            <!-- Left Column: Info & Details -->
+            <div class="contact-info-col">
+                <span class="page-subtitle">/ CONTACT</span>
+                <h1 class="page-title">Let's talk<span>.</span></h1>
+                <p class="lead-text">
+                    Tell me what you are working on. I read everything and I answer &mdash; research, work, or a student
+                    event you want help with.
+                </p>
+
+                <div class="contact-rows">
+                    <div class="info-row">
+                        <span class="info-label">LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/kevin-sanchez-josue/" target="_blank"
+                            class="accent-link">kevin-sanchez-josue &rarr;</a>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Where I am</span>
+                        <span class="info-value">Ecuador &bull; UTC-5</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Best time to reach me</span>
+                        <span class="info-value">Mon all day &bull; after 17:00</span>
+                    </div>
+                </div>
+
+                <p class="form-hint">
+                    Prefer the form? It takes under a minute. Everything except the message is a single tap.
+                </p>
+            </div>
+
+            <!-- Right Column: Form Card -->
+            <div class="contact-form-card">
+                <span class="card-header-label">SEND A MESSAGE</span>
+
+                <form action="#" method="POST" class="contact-form">
+                    <!-- Row 1: Full Name & Email -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullname">FULL NAME</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Kevin Sanchez" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" placeholder="you@university.edu" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Date of Birth & Degree -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dateofbirth">DATE OF BIRTH</label>
+                            <input type="text" id="dateofbirth" name="dateofbirth" placeholder="dd / mm / yyyy"
+                                onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="degree">DEGREE PROGRAMME</label>
+                            <select id="degree" name="degree" required>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Mathematics">Mathematics</option>
+                                <option value="Data Science">Data Science</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Semester & Reason to Contact -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="semester">SEMESTER</label>
+                            <select id="semester" name="semester" required>
+                                <option value="8th">8th</option>
+                                <option value="7th">7th</option>
+                                <option value="6th">6th</option>
+                                <option value="5th">5th</option>
+                                <option value="4th">4th</option>
+                                <option value="3rd">3rd</option>
+                                <option value="2nd">2nd</option>
+                                <option value="1st">1st</option>
+                                <option value="Leveling">Leveling</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reason">REASON TO CONTACT</label>
+                            <select id="reason" name="reason" required>
+                                <option value="Question">Question</option>
+                                <option value="Research">Research Collaboration</option>
+                                <option value="Project">Project Proposal</option>
+                                <option value="Event">Student Event</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: Message Textarea -->
+                    <div class="form-group full-width">
+                        <label for="message">MESSAGE</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="What are you working on, and what do you need from me?" required></textarea>
+                    </div>
+
+                    <!-- Row 5: Checkbox Consent -->
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="checkbox" name="checkbox" required>
+                        <label for="checkbox">I agree to Kevin using the data in this form to answer me.</label>
+                    </div>
+
+                    <!-- Row 6: Submit Button & Reply time note -->
+                    <div class="form-submit-row">
+                        <button type="submit" class="submit-button">Send message</button>
+                        <span class="submit-note">Usually answered within two days.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Navigation / Next Section Link -->
+        <div class="next-page-container">
+            <div class="next-label-group">
+                <span class="next-caption">NOT READY TO WRITE YET?</span>
+                <a href="professional.html" class="next-link">Read the research first <span class="next-arrow">&rarr;</span></a>
+            </div>
+            <a href="professional.html" class="btn-outline-card">Professional</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Created by Kevin Sanchez in Ecuador on August 2026 for Web Applications Course</p>
+    </footer>
+</body>
+
+</html>
