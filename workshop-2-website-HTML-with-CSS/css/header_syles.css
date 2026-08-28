@@ -6,12 +6,14 @@ header {
     padding: 1.5rem 4rem;
     max-width: 1400px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .logo-name {
     font-weight: 800;
     font-size: 1.5rem;
     color: var(--primary-text);
+    flex-shrink: 0;
 }
 
 .logo-name::after {
@@ -19,12 +21,28 @@ header {
     color: var(--accent-color);
 }
 
+.navigation-bar {
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+.navigation-bar::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
 .navigation-bar ul {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
+    white-space: nowrap;
 }
 
 .navigation-bar a {
@@ -33,6 +51,7 @@ header {
     font-weight: 600;
     font-size: 1rem;
     transition: color 0.3s;
+    white-space: nowrap;
 }
 
 .navigation-bar a:hover,
@@ -42,6 +61,10 @@ header {
 
 .navigation-bar a:hover {
     text-decoration: underline;
+}
+
+.contact-button {
+    flex-shrink: 0;
 }
 
 header .icon-link {
@@ -61,4 +84,92 @@ header .icon-link {
 
 header .icon-link:hover {
     transform: scale(1.2);
+}
+
+/* =========================================================
+   HEADER RESPONSIVE DESIGN (iPad, Tablet & Mobile)
+   ========================================================= */
+
+@media (max-width: 992px) {
+    header {
+        padding: 1.2rem 2rem;
+        gap: 1rem;
+    }
+
+    .navigation-bar ul {
+        gap: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 1.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .logo-name {
+        order: 1;
+        font-size: 1.35rem;
+    }
+
+    .contact-button {
+        order: 2;
+    }
+
+    /* Horizontal Nav Bar Strip below Logo & Contact */
+    .navigation-bar {
+        order: 3;
+        width: 100%;
+        min-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 0.4rem 0 0.6rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .navigation-bar ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 1.4rem;
+        margin: 0;
+        padding: 0 0.3rem;
+        width: max-content;
+        /* Guarantees strict horizontal line */
+    }
+
+    .navigation-bar a {
+        font-size: 0.95rem;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    header .icon-link {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.8rem 1rem;
+    }
+
+    .logo-name {
+        font-size: 1.25rem;
+    }
+
+    .navigation-bar ul {
+        gap: 1.1rem;
+    }
+
+    .navigation-bar a {
+        font-size: 0.88rem;
+    }
 }

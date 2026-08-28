@@ -377,9 +377,51 @@
 
     .events-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .page-title {
         font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .extracurricular-container {
+        padding: 0 1.25rem;
+        margin: 2rem auto;
+    }
+
+    .page-title {
+        font-size: 2.4rem;
+    }
+
+    .event-card,
+    .every-semester-card,
+    .role-card {
+        padding: 1.4rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Estados (badges) debajo de los títulos en celulares */
+    .event-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .event-title-group {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .card-header-with-logo {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .event-link {
+        word-break: break-all;
     }
 }
