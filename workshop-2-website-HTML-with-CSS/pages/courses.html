@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
     <link rel="preload" href="../css/main_styles.css" as="style">
     <link href="../css/main_styles.css" rel="stylesheet">
     <link rel="preload" href="../css/header_syles.css" as="style">
     <link href="../css/header_syles.css" rel="stylesheet">
+    <link rel="preload" href="../css/courses_styles.css" as="style">
+    <link rel="stylesheet" href="../css/courses_styles.css">
     <title>Courses | KevJoss</title>
 </head>
 
@@ -24,11 +26,11 @@
         <nav class="navigation-bar">
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="professional.html">Professional Experience</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="professional.html">Professional</a></li>
+                <li><a href="extracurricular.html">Extracurricular</a></li>
                 <li class="current-page"><a href="courses.html">Courses</a></li>
                 <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="extracurricular.html">Extracurricular</a></li>
             </ul>
         </nav>
         <div class="contact-button">
@@ -41,134 +43,210 @@
             </a>
         </div>
     </header>
-    <main>
-        <p>This page contains some information about the courses that I'm taking in this semester.
-        </p>
-        <article>
-            <h2>Web Applications</h2>
-            <p>
-                This course is a survey of technologies and techniques for building internet applications.
-                It covers the fundamentals of HTTP, HTML, CSS, JavaScript, and server-side programming.
-                It also covers topics such as security and accessibility.
-            </p>
-            <p><b>Instructor: </b>Francisco Hidrobo PhD.</p>
-            <h3>Course content</h3>
-            <p>
-                The course content includes:
-            </p>
-            <ul>
-                <li>Introduction to Web Applications</li>
-                <li>HTTP and HTML</li>
-                <li>CSS and JavaScript</li>
-                <li>Server-side programming</li>
-                <li>Security</li>
-                <li>Accessibility</li>
-            </ul>
-            <p>My top interests of the programs are: </p>
-            <ol>
-                <li>Frameworks of JavaScript (React, Angular, Vue.js)</li>
-                <li>How to deploy web pages</li>
-                <li>Modern tools and technologies</li>
-            </ol>
-            <p>You can see the <a href="https://drive.google.com/file/d/1iN0yvXJ8Ji1I06x-NJqhNliwrUb1MJmT/view"
-                    target="_blank">Web Applications course syllabus</a></p>
-        </article>
 
-        <article>
-            <h2>Machine Learning</h2>
-            <p>
-                This course is an introduction to machine learning.
-                It covers the fundamentals of machine learning, including supervised learning, unsupervised learning,
-                and
-                reinforcement learning.
-                It also covers topics such as model evaluation, model selection, and model deployment.
+    <main class="courses-container">
+        <!-- Header Section -->
+        <section class="courses-header">
+            <span class="page-subtitle">/ COURSES</span>
+            <h1 class="page-title">This semester<span>.</span></h1>
+            <p class="lead-text">
+                Four courses, same four fields each &mdash; instructor, contents, what I care about most, and the
+                syllabus when it exists.
             </p>
-            <p><b>Instructor: </b>Juan Pablo Astudillo PhD.</p>
-            <h3>Course content</h3>
-            <p>
-                The course content includes:
-            </p>
-            <ul>
-                <li>Introduction to Machine Learning</li>
-                <li>Supervised Learning</li>
-                <li>Unsupervised Learning</li>
-                <li>Reinforcement Learning</li>
-                <li>Model Evaluation</li>
-                <li>Model Selection</li>
-                <li>Model Deployment</li>
-            </ul>
-            <p>My top interests of the programs are: </p>
-            <ol>
-                <li>Algorithms of classification and regression</li>
-                <li>How it works and deploy federated learning</li>
-                <li>Efficiency of the solutions provied by ML algorithms</li>
-            </ol>
-        </article>
+        </section>
 
-        <article>
-            <h2>Software Engineering</h2>
-            <p>
-                This course is an introduction to software engineering.
-                It covers the fundamentals of software engineering, including software development, software design, and
-                software testing.
-                It also covers topics such as software architecture, software maintenance, and software evolution.
-            </p>
-            <p><b>Instructor: </b>Juan Pablo Astudillo PhD.</p>
-            <h3>Course content</h3>
-            <p>
-                The course content includes:
-            </p>
-            <ul>
-                <li>Introduction to Software Engineering</li>
-                <li>Software Development</li>
-                <li>Software Design</li>
-                <li>Software Testing</li>
-                <li>Software Architecture</li>
-                <li>Software Maintenance</li>
-                <li>Software Evolution</li>
-            </ul>
-            <p>My top interests of the programs are: </p>
-            <ol>
-                <li>Architectural patterns for the development of large scale applications</li>
-                <li>Best practices for development tech projects</li>
-                <li>How to leadership teams</li>
-            </ol>
-            <p>The information about the program is not available yet.</p>
-        </article>
+        <!-- Courses Grid -->
+        <div class="courses-grid">
+            <!-- Course Card 01 -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div>
+                        <h3 class="course-name">Web Applications</h3>
+                        <p class="instructor">Francisco Hidrobo, PhD.</p>
+                    </div>
+                    <span class="course-num">01</span>
+                </div>
+                <div class="course-body">
+                    <p class="course-description">
+                        A survey of technologies for building internet applications: HTTP, HTML, CSS, JavaScript, and
+                        server-side programming, plus security and accessibility.
+                    </p>
+                    <div class="meta-block">
+                        <span class="meta-label">CONTENTS</span>
+                        <div class="tags-container">
+                            <span class="tag">HTTP &amp; HTML</span>
+                            <span class="tag">CSS &amp; JavaScript</span>
+                            <span class="tag">Server-side</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">Accessibility</span>
+                        </div>
+                    </div>
 
-        <article>
-            <h2>Optimization Methods</h2>
-            <p>
-                This course is an introduction to optimization methods.
-                It covers the fundamentals of optimization methods, including linear programming, nonlinear programming,
-                and
-                integer programming.
-                It also covers topics such as optimization algorithms, optimization applications, and optimization
-                software.
-            </p>
-            <p><b>Instructor: </b>Zenaida Castillo PhD.</p>
-            <h3>Course content</h3>
-            <p>
-                The course content includes:
-            </p>
-            <ul>
-                <li>Introduction to Optimization Methods</li>
-                <li>Linear Programming</li>
-                <li>Nonlinear Programming</li>
-                <li>Integer Programming</li>
-                <li>Optimization Algorithms</li>
-            </ul>
-            <p>My top interests of the programs are: </p>
-            <ol>
-                <li>How much efficient are the optimization algorithms</li>
-                <li>How Neural Networks are related with the optimization algorithms</li>
-                <li>Applications of the optimization algorithms in real world problems</li>
-            </ol>
-            <p>The information about the program is not available yet.</p>
-        </article>
+                    <div class="meta-block">
+                        <span class="meta-label">WHAT I WANT MOST FROM IT</span>
+                        <ol class="numbered-list">
+                            <li>JavaScript frameworks &mdash; React, Angular, Vue</li>
+                            <li>How to deploy web pages</li>
+                            <li>Modern tooling</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="course-footer">
+                    <a href="https://drive.google.com/file/d/1iN0yvXJ8Ji1I06x-NJqhNliwrUb1MJmT/view" target="_blank"
+                        class="accent-link">Syllabus &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Course Card 02 -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div>
+                        <h3 class="course-name">Machine Learning</h3>
+                        <p class="instructor">Juan Pablo Astudillo, PhD.</p>
+                    </div>
+                    <span class="course-num">02</span>
+                </div>
+                <div class="course-body">
+                    <p class="course-description">
+                        Fundamentals of machine learning &mdash; supervised, unsupervised and reinforcement learning
+                        &mdash; with model evaluation, selection and deployment.
+                    </p>
+
+                    <div class="meta-block">
+                        <span class="meta-label">CONTENTS</span>
+                        <div class="tags-container">
+                            <span class="tag">Supervised</span>
+                            <span class="tag">Unsupervised</span>
+                            <span class="tag">Federated Learning</span>
+                            <span class="tag">Evaluation</span>
+                            <span class="tag">Selection</span>
+                            <span class="tag">Deployment</span>
+                        </div>
+                    </div>
+
+                    <div class="meta-block">
+                        <span class="meta-label">WHAT I WANT MOST FROM IT</span>
+                        <ol class="numbered-list">
+                            <li>Classification and regression algorithms</li>
+                            <li>How federated learning works and deploys</li>
+                            <li>How efficient ML solutions really are</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="course-footer">
+                    <span class="disabled-text">Syllabus not published yet</span>
+                </div>
+            </div>
+
+            <!-- Course Card 03 -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div>
+                        <h3 class="course-name">Software Engineering</h3>
+                        <p class="instructor">Juan Pablo Astudillo, PhD.</p>
+                    </div>
+                    <span class="course-num">03</span>
+                </div>
+                <div class="course-body">
+                    <p class="course-description">
+                        Fundamentals of software engineering: development, design and testing, with architecture,
+                        maintenance and evolution.
+                    </p>
+
+                    <div class="meta-block">
+                        <span class="meta-label">CONTENTS</span>
+                        <div class="tags-container">
+                            <span class="tag">Development</span>
+                            <span class="tag">Design</span>
+                            <span class="tag">Testing</span>
+                            <span class="tag">Architecture</span>
+                            <span class="tag">Maintenance</span>
+                            <span class="tag">Evolution</span>
+                        </div>
+                    </div>
+
+                    <div class="meta-block">
+                        <span class="meta-label">WHAT I WANT MOST FROM IT</span>
+                        <ol class="numbered-list">
+                            <li>Architectural patterns for large-scale applications</li>
+                            <li>Best practices for running tech projects</li>
+                            <li>How to lead teams</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="course-footer">
+                    <span class="disabled-text">Syllabus not published yet</span>
+                </div>
+            </div>
+
+            <!-- Course Card 04 -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div>
+                        <h3 class="course-name">Optimization Methods</h3>
+                        <p class="instructor">Zenaida Castillo, PhD.</p>
+                    </div>
+                    <span class="course-num">04</span>
+                </div>
+                <div class="course-body">
+                    <p class="course-description">
+                        Linear, nonlinear and integer programming, with the algorithms, applications and software around
+                        them.
+                    </p>
+
+                    <div class="meta-block">
+                        <span class="meta-label">CONTENTS</span>
+                        <div class="tags-container">
+                            <span class="tag">Linear</span>
+                            <span class="tag">Nonlinear</span>
+                            <span class="tag">Integer</span>
+                            <span class="tag">Algorithms</span>
+                        </div>
+                    </div>
+
+                    <div class="meta-block">
+                        <span class="meta-label">WHAT I WANT MOST FROM IT</span>
+                        <ol class="numbered-list">
+                            <li>How efficient optimization algorithms actually are</li>
+                            <li>How neural networks relate to them</li>
+                            <li>Applications to real-world problems</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="course-footer">
+                    <span class="disabled-text">Syllabus not published yet</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- University Affiliation Card -->
+        <div class="university-affiliation-card">
+            <div class="uni-logo-box">
+                <img src="../images/Logo-YT.png" alt="Yachay Tech University Logo" class="uni-logo">
+            </div>
+            <div class="uni-info">
+                <span class="badge badge-purple">ACADEMIC PROGRAMME</span>
+                <p class="uni-text">
+                    These courses are part of the official <strong>Computer Science</strong> curriculum at
+                    <strong>Yachay Tech University</strong> (8th Semester). You can explore the full programme on the
+                    <a href="https://yachaytech.edu.ec/carrera-de-computacion/" target="_blank"
+                        class="accent-link">official Yachay Tech website</a>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer Navigation / Next Section Link -->
+        <div class="next-page-container">
+            <div class="next-label-group">
+                <span class="next-caption">NEXT</span>
+                <a href="schedule.html" class="next-link">See when these actually happen &rarr;</a>
+            </div>
+            <a href="schedule.html" class="btn btn-primary next-button">Schedule</a>
+        </div>
     </main>
-    <footer>
-        <p>Created by Kevin Sanchez in Ecuador on August 2026</p>
+
+    <footer class="footer">
+        <p>Created by Kevin Sanchez in Ecuador on August 2026 for Web Applications Course</p>
     </footer>
 </body>
 

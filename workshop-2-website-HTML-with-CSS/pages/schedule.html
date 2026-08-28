@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
     <link rel="preload" href="../css/main_styles.css" as="style">
     <link href="../css/main_styles.css" rel="stylesheet">
     <link rel="preload" href="../css/header_syles.css" as="style">
     <link href="../css/header_syles.css" rel="stylesheet">
+    <link rel="preload" href="../css/schedule_styles.css" as="style">
+    <link rel="stylesheet" href="../css/schedule_styles.css">
     <title>Schedule | KevJoss</title>
 </head>
 
@@ -25,10 +27,10 @@
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="professional.html">Professional Experience</a></li>
+                <li><a href="professional.html">Professional</a></li>
+                <li><a href="extracurricular.html">Extracurricular</a></li>
                 <li><a href="courses.html">Courses</a></li>
                 <li class="current-page"><a href="schedule.html">Schedule</a></li>
-                <li><a href="extracurricular.html">Extracurricular</a></li>
             </ul>
         </nav>
         <div class="contact-button">
@@ -42,115 +44,229 @@
         </div>
     </header>
 
-    <main>
-        <p>This web page shows my schedule for the current semester.</p>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th colspan="6" scope="colgroup">Academic Calendar</th>
-                </tr>
-                <tr>
-                    <th scope="col">Hour</th>
-                    <th scope="col">Monday</th>
-                    <th scope="col">Tuesday</th>
-                    <th scope="col">Wednesday</th>
-                    <th scope="col">Thursday</th>
-                    <th scope="col">Friday</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>7:00 - 8:00</td>
-                    <td></td>
-                    <td rowspan="3">Optimization Methods</td>
-                    <td></td>
-                    <td rowspan="2">Software Engineering</td>
-                    <td rowspan="3">Web Applications</td>
-                </tr>
-                <tr>
-                    <td>8:00 - 9:00</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>9:00 - 10:00</td>
-                    <td></td>
-                    <td rowspan="2">Optimization Methods</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>10:00 - 11:00</td>
-                    <td></td>
-                    <td rowspan="3">Software Engineering</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>11:00 - 12:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>12:00 - 13:00</td>
-                    <td></td>
-                    <td></td>
-                    <td rowspan="2">Machine Learning</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>13:00 - 14:00</td>
-                    <td></td>
-                    <td></td>
-                    <td rowspan="3">Machine Learning</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>14:00 - 15:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>15:00 - 16:00</td>
-                    <td></td>
-                    <td rowspan="2">Web Applications</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>16:00 - 17:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>17:00 - 18:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>18:00 - 19:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+    <main class="schedule-container">
+        <!-- Header Section -->
+        <section class="schedule-header">
+            <span class="page-subtitle">/ SCHEDULE</span>
+            <h1 class="page-title">My week<span>.</span></h1>
+            <p class="lead-text">
+                Classes run Tuesday to Friday, 7:00 to 17:00. Mondays and afternoons after 17:00 are free &mdash; that is when I work and do research.
+            </p>
+        </section>
+
+        <!-- Legend Bar -->
+        <div class="legend-bar">
+            <span class="legend-label">LEGEND</span>
+            <div class="legend-items">
+                <div class="legend-item"><span class="code code-web">WEB</span> <span>Web Applications</span></div>
+                <div class="legend-item"><span class="code code-ml">ML</span> <span>Machine Learning</span></div>
+                <div class="legend-item"><span class="code code-se">SE</span> <span>Software Engineering</span></div>
+                <div class="legend-item"><span class="code code-opt">OPT</span> <span>Optimization Methods</span></div>
+            </div>
+        </div>
+
+        <!-- Schedule Grid Timetable -->
+        <div class="schedule-grid-wrapper">
+            <div class="schedule-grid">
+                <!-- Headers (Row 1) -->
+                <div class="grid-header col-1">HOUR</div>
+                <div class="grid-header col-2">MON</div>
+                <div class="grid-header col-3">TUE</div>
+                <div class="grid-header col-4">WED</div>
+                <div class="grid-header col-5">THU</div>
+                <div class="grid-header col-6">FRI</div>
+
+                <!-- Hour Labels (Column 1, Rows 2-13) -->
+                <div class="hour-label row-2">7:00</div>
+                <div class="hour-label row-3">8:00</div>
+                <div class="hour-label row-4">9:00</div>
+                <div class="hour-label row-5">10:00</div>
+                <div class="hour-label row-6">11:00</div>
+                <div class="hour-label row-7">12:00</div>
+                <div class="hour-label row-8">13:00</div>
+                <div class="hour-label row-9">14:00</div>
+                <div class="hour-label row-10">15:00</div>
+                <div class="hour-label row-11">16:00</div>
+                <div class="hour-label row-12">17:00</div>
+                <div class="hour-label row-13">18:00</div>
+
+                <!-- Background Grid Cells for crisp lines -->
+                <!-- Row 2 (7:00) -->
+                <div class="bg-cell col-2 row-2"></div>
+                <div class="bg-cell col-3 row-2"></div>
+                <div class="bg-cell col-4 row-2"></div>
+                <div class="bg-cell col-5 row-2"></div>
+                <div class="bg-cell col-6 row-2"></div>
+
+                <!-- Row 3 (8:00) -->
+                <div class="bg-cell col-2 row-3"></div>
+                <div class="bg-cell col-3 row-3"></div>
+                <div class="bg-cell col-4 row-3"></div>
+                <div class="bg-cell col-5 row-3"></div>
+                <div class="bg-cell col-6 row-3"></div>
+
+                <!-- Row 4 (9:00) -->
+                <div class="bg-cell col-2 row-4"></div>
+                <div class="bg-cell col-3 row-4"></div>
+                <div class="bg-cell col-4 row-4"></div>
+                <div class="bg-cell col-5 row-4"></div>
+                <div class="bg-cell col-6 row-4"></div>
+
+                <!-- Row 5 (10:00) -->
+                <div class="bg-cell col-2 row-5"></div>
+                <div class="bg-cell col-3 row-5"></div>
+                <div class="bg-cell col-4 row-5"></div>
+                <div class="bg-cell col-5 row-5"></div>
+                <div class="bg-cell col-6 row-5"></div>
+
+                <!-- Row 6 (11:00) -->
+                <div class="bg-cell col-2 row-6"></div>
+                <div class="bg-cell col-3 row-6"></div>
+                <div class="bg-cell col-4 row-6"></div>
+                <div class="bg-cell col-5 row-6"></div>
+                <div class="bg-cell col-6 row-6"></div>
+
+                <!-- Row 7 (12:00) -->
+                <div class="bg-cell col-2 row-7"></div>
+                <div class="bg-cell col-3 row-7"></div>
+                <div class="bg-cell col-4 row-7"></div>
+                <div class="bg-cell col-5 row-7"></div>
+                <div class="bg-cell col-6 row-7"></div>
+
+                <!-- Row 8 (13:00) -->
+                <div class="bg-cell col-2 row-8"></div>
+                <div class="bg-cell col-3 row-8"></div>
+                <div class="bg-cell col-4 row-8"></div>
+                <div class="bg-cell col-5 row-8"></div>
+                <div class="bg-cell col-6 row-8"></div>
+
+                <!-- Row 9 (14:00) -->
+                <div class="bg-cell col-2 row-9"></div>
+                <div class="bg-cell col-3 row-9"></div>
+                <div class="bg-cell col-4 row-9"></div>
+                <div class="bg-cell col-5 row-9"></div>
+                <div class="bg-cell col-6 row-9"></div>
+
+                <!-- Row 10 (15:00) -->
+                <div class="bg-cell col-2 row-10"></div>
+                <div class="bg-cell col-3 row-10"></div>
+                <div class="bg-cell col-4 row-10"></div>
+                <div class="bg-cell col-5 row-10"></div>
+                <div class="bg-cell col-6 row-10"></div>
+
+                <!-- Row 11 (16:00) -->
+                <div class="bg-cell col-2 row-11"></div>
+                <div class="bg-cell col-3 row-11"></div>
+                <div class="bg-cell col-4 row-11"></div>
+                <div class="bg-cell col-5 row-11"></div>
+                <div class="bg-cell col-6 row-11"></div>
+
+                <!-- Row 12 (17:00) -->
+                <div class="bg-cell col-2 row-12"></div>
+                <div class="bg-cell col-3 row-12"></div>
+                <div class="bg-cell col-4 row-12"></div>
+                <div class="bg-cell col-5 row-12"></div>
+                <div class="bg-cell col-6 row-12"></div>
+
+                <!-- Row 13 (18:00) -->
+                <div class="bg-cell col-2 row-13"></div>
+                <div class="bg-cell col-3 row-13"></div>
+                <div class="bg-cell col-4 row-13"></div>
+                <div class="bg-cell col-5 row-13"></div>
+                <div class="bg-cell col-6 row-13"></div>
+
+                <!-- Monday: No Classes Box -->
+                <div class="no-classes-box slot-mon">
+                    <span class="vertical-text">NO CLASSES</span>
+                </div>
+
+                <!-- Tuesday Cards -->
+                <div class="class-card slot-tue-opt">
+                    <span class="card-code">OPT</span>
+                    <strong class="card-name">Optimization Methods</strong>
+                    <span class="card-time">7:00 &ndash; 10:00</span>
+                </div>
+
+                <div class="class-card slot-tue-se">
+                    <span class="card-code">SE</span>
+                    <strong class="card-name">Software Engineering</strong>
+                    <span class="card-time">10:00 &ndash; 13:00</span>
+                </div>
+
+                <div class="class-card slot-tue-web">
+                    <span class="card-code">WEB</span>
+                    <strong class="card-name">Web Applications</strong>
+                    <span class="card-time">15:00 &ndash; 17:00</span>
+                </div>
+
+                <!-- Wednesday Cards -->
+                <div class="class-card slot-wed-opt">
+                    <span class="card-code">OPT</span>
+                    <strong class="card-name">Optimization Methods</strong>
+                    <span class="card-time">9:00 &ndash; 11:00</span>
+                </div>
+
+                <div class="class-card slot-wed-ml">
+                    <span class="card-code">ML</span>
+                    <strong class="card-name">Machine Learning</strong>
+                    <span class="card-time">13:00 &ndash; 16:00</span>
+                </div>
+
+                <!-- Thursday Cards -->
+                <div class="class-card slot-thu-se">
+                    <span class="card-code">SE</span>
+                    <strong class="card-name">Software Engineering</strong>
+                    <span class="card-time">7:00 &ndash; 9:00</span>
+                </div>
+
+                <div class="class-card slot-thu-ml">
+                    <span class="card-code">ML</span>
+                    <strong class="card-name">Machine Learning</strong>
+                    <span class="card-time">12:00 &ndash; 14:00</span>
+                </div>
+
+                <!-- Friday Cards -->
+                <div class="class-card slot-fri-web">
+                    <span class="card-code">WEB</span>
+                    <strong class="card-name">Web Applications</strong>
+                    <span class="card-time">7:00 &ndash; 10:00</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Summary Stats Bar -->
+        <div class="schedule-stats-bar">
+            <div class="stat-item">
+                <span class="stat-label">CONTACT HOURS / WEEK</span>
+                <span class="stat-value">20</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">FREE DAY</span>
+                <span class="stat-value">Monday</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">EARLIEST START</span>
+                <span class="stat-value">7:00</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">LATEST END</span>
+                <span class="stat-value">17:00</span>
+            </div>
+        </div>
+
+        <!-- Footer Navigation / Next Section Link -->
+        <div class="next-page-container">
+            <div class="next-label-group">
+                <span class="next-caption">NEXT</span>
+                <a href="contact.html" class="next-link">Free slots are for you &mdash; write to me &rarr;</a>
+            </div>
+            <a href="contact.html" class="btn btn-primary next-button">Contact</a>
+        </div>
     </main>
-    <footer>
-        <p>Created by Kevin Sanchez in Ecuador on August 2026</p>
+
+    <footer class="footer">
+        <p>Created by Kevin Sanchez in Ecuador on August 2026 for Web Applications Course</p>
     </footer>
 </body>
 

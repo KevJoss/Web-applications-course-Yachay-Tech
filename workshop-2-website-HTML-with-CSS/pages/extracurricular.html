@@ -4,17 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
     <link rel="preload" href="../css/main_styles.css" as="style">
     <link href="../css/main_styles.css" rel="stylesheet">
     <link rel="preload" href="../css/header_syles.css" as="style">
     <link href="../css/header_syles.css" rel="stylesheet">
-    <title>Courses | KevJoss</title>
+    <link rel="preload" href="../css/extracurricular_styles.css" as="style">
+    <link rel="stylesheet" href="../css/extracurricular_styles.css">
+    <title>Extracurricular | KevJoss</title>
 </head>
 
 <body>
@@ -24,11 +26,11 @@
         <nav class="navigation-bar">
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="professional.html">Professional Experience</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="professional.html">Professional</a></li>
+                <li class="current-page"><a href="extracurricular.html">Extracurricular</a></li>
                 <li><a href="courses.html">Courses</a></li>
                 <li><a href="schedule.html">Schedule</a></li>
-                <li class="current-page"><a href="extracurricular.html">Extracurricular</a></li>
             </ul>
         </nav>
         <div class="contact-button">
@@ -42,102 +44,186 @@
         </div>
     </header>
 
-    <main>
-        <p>
-            Outside coursework I lead student organizations at Yachay Tech. The common
-            goal across all of them is building spaces where computer science students
-            can learn from each other and connect with industry.
-        </p>
-
-        <section>
-            <h2>Leadership Roles</h2>
-
-            <article>
-                <h3>Vice Chair &mdash; IEEE Computer Society, Yachay Tech Student Chapter</h3>
-                <p>
-                    My current role. I help organize the chapter's technical programme and
-                    its outreach to the wider university community.
-                </p>
-                <p>
-                    Chapter links:
-                    <a href="https://edu.ieee.org/eec-ytcs/" target="_blank" rel="noopener">official website</a>
-                    and
-                    <a href="https://www.instagram.com/computer_society.yt/" target="_blank"
-                        rel="noopener">Instagram</a>.
-                </p>
-            </article>
-
-            <article>
-                <h3>President &mdash; Computer Science Club</h3>
-                <p>
-                    I led the club's activities and coordinated its events calendar.
-                </p>
-                <p>
-                    Follow the club on
-                    <a href="https://www.instagram.com/ccc_yt.oficial/" target="_blank" rel="noopener">Instagram</a>.
-                </p>
-            </article>
-
-            <article>
-                <h3>Student Representative &mdash; Computer Science Programme</h3>
-                <p>
-                    Current role. I represent my cohort in academic matters and act as a
-                    channel between students and the programme.
-                </p>
-            </article>
-        </section>
-
-        <section>
-            <h2>Activities and Events</h2>
-
-            <h3>Regular programming</h3>
-            <ul>
-                <li>Technical talks open to the university community</li>
-                <li>Hands-on workshops on computer science topics</li>
-                <li>Site visits to software companies</li>
-                <li>Networking sessions connecting students with alumni</li>
-            </ul>
-
-            <h3>CompuFest 2026</h3>
-            <p>
-                A large open-house event where students present the projects they built
-                during the semester. The audience includes the university community,
-                companies, and Yachay Tech graduates now working at leading tech firms.
-            </p>
-            <p>
-                You can find more information about the event in this website:
-                <a href="https://compufest.yachaytech.edu.ec/" target="_blank" rel="noopener">CompuFest
-                    2026</a>.
-            </p>
-
-            <h3>Inter-university Hackathon</h3>
-            <p>
-                Currently in organisation. Three companies each bring a real problem from
-                their own operations, and student teams have three days to build a usable
-                solution. The companies are not necessarily from the tech sector, which is
-                part of the point: it forces us to apply what we know to unfamiliar domains.
-            </p>
-            <p>What participants get out of it:</p>
-            <ol>
-                <li>Applying coursework knowledge to a problem with real constraints</li>
-                <li>Direct contact with companies and their engineering teams</li>
-                <li>Experience working under a deadline with a team</li>
-            </ol>
-        </section>
-
-        <section>
-            <h2>Get in Touch</h2>
-            <p>
-                You can reach me through my
-                <a href="https://www.linkedin.com/in/kevin-sanchez-josue/" target="_blank" rel="noopener">LinkedIn
-                    profile</a>
-                or through the <a href="contact.html">contact form</a> on this site.
+    <main class="extracurricular-container">
+        <!-- Header Section -->
+        <section class="extracurricular-header">
+            <span class="page-subtitle">/ EXTRACURRICULAR</span>
+            <h1 class="page-title">Leading and building<span>.</span></h1>
+            <p class="lead-text">
+                I lead student organizations at Yachay Tech. The goal is the same across all of them: spaces where
+                computer science students learn from each other and meet industry.
             </p>
         </section>
+
+        <!-- Section: Roles -->
+        <section class="content-section">
+            <h2 class="section-title"><span class="bullet">•</span> Roles</h2>
+
+            <div class="roles-grid">
+                <!-- Role Card 1 -->
+                <div class="role-card">
+                    <div class="card-header-with-logo">
+                        <span class="badge badge-purple">CURRENT</span>
+                        <div class="card-logo-box">
+                            <img src="../images/IEEE_CS_logo.jpg" alt="IEEE Computer Society Logo" class="card-logo">
+                        </div>
+                    </div>
+                    <h3 class="role-title">Vice Chair</h3>
+                    <p class="role-org">IEEE Computer Society — Yachay Tech Student Chapter</p>
+                    <p class="role-description">
+                        I organize the chapter's technical programme and its outreach to the wider university.
+                    </p>
+                    <div class="role-links">
+                        <a href="https://edu.ieee.org/eec-ytcs/" target="_blank" class="icon-link" aria-label="Website">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/computer_society.yt/" target="_blank" class="icon-link"
+                            aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Role Card 2 -->
+                <div class="role-card">
+                    <span class="badge badge-purple">CURRENT</span>
+                    <h3 class="role-title">Student Representative</h3>
+                    <p class="role-org">Computer Science Programme</p>
+                    <p class="role-description">
+                        I represent my cohort in academic matters and keep the channel open between students and the
+                        programme.
+                    </p>
+                </div>
+
+                <!-- Role Card 3 -->
+                <div class="role-card">
+                    <div class="card-header-with-logo">
+                        <span class="badge badge-gray">PAST</span>
+                        <div class="card-logo-box">
+                            <img src="../images/ccc_logo.jpg" alt="Computer Science Club Logo" class="card-logo">
+                        </div>
+                    </div>
+                    <h3 class="role-title">President</h3>
+                    <p class="role-org">Computer Science Club</p>
+                    <p class="role-description">
+                        I led the club's activities and coordinated its events calendar.
+                    </p>
+                    <div class="role-links">
+                        <a href="https://www.instagram.com/ccc_yt.oficial/" target="_blank" class="icon-link"
+                            aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Events I run -->
+        <section class="content-section">
+            <h2 class="section-title"><span class="bullet">•</span> Events I run</h2>
+
+            <div class="events-grid">
+                <!-- Left Column: Event Cards -->
+                <div class="events-left-col">
+                    <!-- Event 1 -->
+                    <div class="event-card">
+                        <div class="event-header">
+                            <div class="event-title-group">
+                                <div class="card-logo-box">
+                                    <img src="../images/COMPUFEST_logo.svg" alt="CompuFest Logo" class="card-logo">
+                                </div>
+                                <h3 class="event-title">CompuFest 2026</h3>
+                            </div>
+                            <span class="badge badge-gray">OPEN HOUSE</span>
+                        </div>
+                        <p class="event-description">
+                            Students present the projects they built during the semester. The audience is the university
+                            community, companies, and Yachay Tech graduates now working at leading tech firms.
+                        </p>
+                        <a href="https://compufest.yachaytech.edu.ec/" target="_blank"
+                            class="accent-link event-link">compufest.yachaytech.edu.ec</a>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="event-card">
+                        <div class="event-header">
+                            <h3 class="event-title">Inter-university Hackathon</h3>
+                            <span class="badge badge-purple">IN ORGANISATION</span>
+                        </div>
+                        <p class="event-description">
+                            Three companies each bring a real problem from their own operations; student teams have
+                            three days to build a usable solution. The companies are not necessarily from the tech
+                            sector — that is the point: it forces us to apply what we know to unfamiliar domains.
+                        </p>
+                        <div class="takeaways-box">
+                            <span class="takeaways-label">WHAT PARTICIPANTS TAKE AWAY</span>
+                            <ol class="takeaways-list">
+                                <li>Coursework applied to a problem with real constraints</li>
+                                <li>Direct contact with companies and their engineering teams</li>
+                                <li>Working under a deadline, with a team</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Every Semester Card -->
+                <div class="events-right-col">
+                    <div class="every-semester-card">
+                        <div class="card-header-label">EVERY SEMESTER</div>
+                        <ul class="semester-list">
+                            <li>
+                                <span class="num">01</span>
+                                <span>Technical talks, open to the whole university</span>
+                            </li>
+                            <li>
+                                <span class="num">02</span>
+                                <span>Hands-on workshops on computer science topics</span>
+                            </li>
+                            <li>
+                                <span class="num">03</span>
+                                <span>Site visits to software companies</span>
+                            </li>
+                            <li>
+                                <span class="num">04</span>
+                                <span>Networking sessions with alumni</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Navigation / Next Section Link -->
+        <div class="next-page-container">
+            <div class="next-label-group">
+                <span class="next-caption">NEXT</span>
+                <a href="courses.html" class="next-link">See what I am studying right now &rarr;</a>
+            </div>
+            <a href="courses.html" class="btn btn-primary next-button">Courses</a>
+        </div>
     </main>
 
-    <footer>
-        <p>Created by Kevin Sanchez in Ecuador on August 2026</p>
+    <footer class="footer">
+        <p>Created by Kevin Sanchez in Ecuador on August 2026 for Web Applications Course</p>
     </footer>
 </body>
 
