@@ -54,13 +54,15 @@
                 and use the latest technologies in AI to solve your problems.
             </p>
             <div class="explore-buttons">
-                <a href="pages/contact.html" class="btn btn-primary">Get In Touch</a>
+                <a href="pages/contact.html" class="btn btn-primary" id="get-in-touch-buttom">Get In Touch</a>
                 <a href="pages/professional.html" class="btn btn-outline">Browse Proffesional Experience</a>
+                <button type="button" class="btn btn-primary" id="color-toggle">Change Color of Hero</button>
             </div>
 
-            <div class="hero-right-column">
+            <div class=" hero-right-column">
                 <div class="hero-image-container">
-                    <img src="images/kevin_photo.png" alt="Kevin Sanchez photo AI Engineer" class="profile-img">
+                    <img src="images/kevin_photo.png" alt="Kevin Sanchez photo AI Engineer" class="profile-img"
+                        id="profile-img-trigger" title="Click to enlarge">
                 </div>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/kevin-sanchez-josue/" aria-label="LinkedIn" target="_blank">
@@ -86,6 +88,20 @@
     <footer class="footer">
         <p>Created by Kevin Sanchez in Ecuador on August 2026 for Web Applications Course</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Profile image enlarged"
+        hidden>
+        <div class="modal-content">
+            <button type="button" class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+            <img src="images/kevin_photo.png" alt="Kevin Sanchez photo AI Engineer enlarged" class="modal-img"
+                id="modal-img">
+            <p class="modal-caption">Kevin Sanchez — AI Engineer</p>
+        </div>
+    </div>
 
 </body>
 

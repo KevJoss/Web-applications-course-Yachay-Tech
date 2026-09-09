@@ -296,3 +296,44 @@
         font-size: 2.8rem;
     }
 }
+
+/* Form Validation Styles */
+
+/* Red border when a field is invalid */
+.input-error {
+    border-color: #e53e3e !important;
+    background-color: #fff5f5 !important;
+    animation: shake 0.3s ease;
+}
+
+/* Small red error message below the field */
+.error-msg {
+    display: block;
+    color: #e53e3e;
+    font-size: 0.78rem;
+    margin-top: 0.3rem;
+    font-weight: 500;
+}
+
+/* Shake animation for invalid fields */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-4px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

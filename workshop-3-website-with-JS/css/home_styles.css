@@ -107,7 +107,7 @@
     border: 1px solid rgba(110, 6, 242, 0.3);
     /* Subtle purple ring */
     border-radius: 50%;
-    z-index: -1;
+    z-index: 1;
 }
 
 .profile-img {
@@ -116,6 +116,8 @@
     object-fit: cover;
     border-radius: 50%;
     background-color: #eaeaea;
+    position: relative;
+    z-index: 2;
 }
 
 /* Social Links */
@@ -250,4 +252,105 @@
         width: 1.4rem;
         height: 1.4rem;
     }
+}
+
+/* IMAGE MODAL */
+
+/* Cursor hint on the profile image */
+.profile-img {
+    cursor: zoom-in;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 6px rgba(110, 6, 242, 0.2);
+}
+
+/* Full-screen overlay */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    /* top/right/bottom/left = 0 */
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Animation */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.modal-visible {
+    opacity: 1;
+}
+
+/* hidden attribute hides it completely; we toggle it via JS */
+.modal-overlay[hidden] {
+    display: none;
+}
+
+/* White card containing the image */
+.modal-content {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    transform: scale(0.85);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.modal-visible .modal-content {
+    transform: scale(1);
+}
+
+/* Enlarged image inside modal */
+.modal-img {
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Caption text */
+.modal-caption {
+    font-size: 1rem;
+    color: var(--secondary-text);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Close button (×) */
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    color: white;
+    background: var(--accent-color);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.modal-close:hover {
+    color: black;
+    background: white;
+    transform: rotate(90deg) scale(1.1);
 }
