@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="preload" href="../css/main_styles.css" as="style">
+    <link href="../css/main_styles.css" rel="stylesheet">
+    <link rel="preload" href="../css/header_syles.css" as="style">
+    <link href="../css/header_syles.css" rel="stylesheet">
+    <link rel="preload" href="../css/courses_styles.css" as="style">
+    <link rel="stylesheet" href="../css/courses_styles.css">
+    <title>Courses | KevJoss</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-name">KevJoss</div>
+
+        <nav class="navigation-bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="professional.html">Professional</a></li>
+                <li><a href="extracurricular.html">Extracurricular</a></li>
+                <li class="current-page"><a href="courses.html">Courses</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+            </ul>
+        </nav>
+        <div class="contact-button">
+            <a href="contact.html" class="icon-link" aria-label="Contact-me">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
+                    <path d="M0 0h1024v1024H0z" fill="none" />
+                    <path fill="currentColor"
+                        d="M924.3 338.4a447.6 447.6 0 0 0-96.1-143.3a443.1 443.1 0 0 0-143-96.3A443.9 443.9 0 0 0 512 64h-2c-60.5.3-119 12.3-174.1 35.9a444.1 444.1 0 0 0-141.7 96.5a445 445 0 0 0-95 142.8A449.9 449.9 0 0 0 65 514.1c.3 69.4 16.9 138.3 47.9 199.9v152c0 25.4 20.6 46 45.9 46h151.8a447.7 447.7 0 0 0 199.5 48h2.1c59.8 0 117.7-11.6 172.3-34.3A443.2 443.2 0 0 0 827 830.5c41.2-40.9 73.6-88.7 96.3-142c23.5-55.2 35.5-113.9 35.8-174.5c.2-60.9-11.6-120-34.8-175.6M312.4 560c-26.4 0-47.9-21.5-47.9-48s21.5-48 47.9-48s47.9 21.5 47.9 48s-21.4 48-47.9 48m199.6 0c-26.4 0-47.9-21.5-47.9-48s21.5-48 47.9-48s47.9 21.5 47.9 48s-21.5 48-47.9 48m199.6 0c-26.4 0-47.9-21.5-47.9-48s21.5-48 47.9-48s47.9 21.5 47.9 48s-21.5 48-47.9 48" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <main class="courses-container">
+        <!-- Header Section -->
+        <section class="courses-header">
+            <span class="page-subtitle">/ COURSES</span>
+            <h1 class="page-title">This semester<span>.</span></h1>
+            <p class="lead-text">
+                Four courses, same four fields each &mdash; instructor, contents, what I care about most, and the
+                syllabus when it exists.
+            </p>
+        </section>
+
+        <!-- Courses Grid -->
+        <div class="courses-grid">
+            <!-- Course Card 01 -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div>
+                        <h3 class="course-name">Web Applications</h3>
+                        <p class="instructor">Francisco Hidrobo, PhD.</p>
+                    </div>
+                    <span class="course-num">01</span>
+                </div>
+                <div class="course-body">
+                    <p class="course-description">
+                        A survey of technologies for building internet applications: HTTP, HTML, CSS, JavaScript, and
+                        server-side programming, plus security and accessibility.
+                    </p>
+                    <div class="meta-block">
+                        <span class="meta-label">CONTENTS</span>
+                        <div class="tags-container">
+                            <span class="tag">HTTP &amp; HTML</span>
+                            <span class="tag">CSS &amp; JavaScript</span>
+                            <span class="tag">Server-side</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">Accessibility</span>
+                        </div>
+                    </div>
+
+                    <div class="meta-block">
+                        <span class="meta-label">WHAT I WANT MOST FROM IT</span>
+                        <ol class="numbered-list">
+                            <li>JavaScript frameworks &mdash; React, Angular, Vue</li>
+                            <li>How to deploy web pages</li>
+                            <li>Modern tooling</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="course-footer">
+                    <a href="https://drive.google.com/file/d/1iN0yvXJ8Ji1I06x-NJqhNliwrUb1MJmT/view" target="_blank"
+                        class="accent-link">Syllabus &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Course Card 02 -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div>
+                        <h3 class="course-name">Machine Learning</h3>
+                        <p class="instructor">Juan Pablo Astudillo, PhD.</p>
+                    </div>
+                    <span class="course-num">02</span>
+                </div>
+                <div class="course-body">
+                    <p class="course-description">
+                        Fundamentals of machine learning &mdash; supervised, unsupervised and reinforcement learning
+                        &mdash; with model evaluation, selection and deployment.
+                    </p>
+
+                    <div class="meta-block">
+                        <span class="meta-label">CONTENTS</span>
+                        <div class="tags-container">
+                            <span class="tag">Supervised</span>
+                            <span class="tag">Unsupervised</span>
+                            <span class="tag">Federated Learning</span>
+                            <span class="tag">Evaluation</span>
+                            <span class="tag">Selection</span>
+                            <span class="tag">Deployment</span>
+                        </div>
+                    </div>
+
+                    <div class="meta-block">
+                        <span class="meta-label">WHAT I WANT MOST FROM IT</span>
+                        <ol class="numbered-list">
+                            <li>Classification and regression algorithms</li>
+                            <li>How federated learning works and deploys</li>
+                            <li>How efficient ML solutions really are</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="course-footer">
+                    <span class="disabled-text">Syllabus not published yet</span>
+                </div>
+            </div>
+
+            <!-- Course Card 03 -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div>
+                        <h3 class="course-name">Software Engineering</h3>
+                        <p class="instructor">Juan Pablo Astudillo, PhD.</p>
+                    </div>
+                    <span class="course-num">03</span>
+                </div>
+                <div class="course-body">
+                    <p class="course-description">
+                        Fundamentals of software engineering: development, design and testing, with architecture,
+                        maintenance and evolution.
+                    </p>
+
+                    <div class="meta-block">
+                        <span class="meta-label">CONTENTS</span>
+                        <div class="tags-container">
+                            <span class="tag">Development</span>
+                            <span class="tag">Design</span>
+                            <span class="tag">Testing</span>
+                            <span class="tag">Architecture</span>
+                            <span class="tag">Maintenance</span>
+                            <span class="tag">Evolution</span>
+                        </div>
+                    </div>
+
+                    <div class="meta-block">
+                        <span class="meta-label">WHAT I WANT MOST FROM IT</span>
+                        <ol class="numbered-list">
+                            <li>Architectural patterns for large-scale applications</li>
+                            <li>Best practices for running tech projects</li>
+                            <li>How to lead teams</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="course-footer">
+                    <span class="disabled-text">Syllabus not published yet</span>
+                </div>
+            </div>
+
+            <!-- Course Card 04 -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div>
+                        <h3 class="course-name">Optimization Methods</h3>
+                        <p class="instructor">Zenaida Castillo, PhD.</p>
+                    </div>
+                    <span class="course-num">04</span>
+                </div>
+                <div class="course-body">
+                    <p class="course-description">
+                        Linear, nonlinear and integer programming, with the algorithms, applications and software around
+                        them.
+                    </p>
+
+                    <div class="meta-block">
+                        <span class="meta-label">CONTENTS</span>
+                        <div class="tags-container">
+                            <span class="tag">Linear</span>
+                            <span class="tag">Nonlinear</span>
+                            <span class="tag">Integer</span>
+                            <span class="tag">Algorithms</span>
+                        </div>
+                    </div>
+
+                    <div class="meta-block">
+                        <span class="meta-label">WHAT I WANT MOST FROM IT</span>
+                        <ol class="numbered-list">
+                            <li>How efficient optimization algorithms actually are</li>
+                            <li>How neural networks relate to them</li>
+                            <li>Applications to real-world problems</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="course-footer">
+                    <span class="disabled-text">Syllabus not published yet</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- University Affiliation Card -->
+        <div class="university-affiliation-card">
+            <div class="uni-logo-box">
+                <img src="../images/Logo-YT.png" alt="Yachay Tech University Logo" class="uni-logo">
+            </div>
+            <div class="uni-info">
+                <span class="badge badge-purple">ACADEMIC PROGRAMME</span>
+                <p class="uni-text">
+                    These courses are part of the official <strong>Computer Science</strong> curriculum at
+                    <strong>Yachay Tech University</strong> (8th Semester). You can explore the full programme on the
+                    <a href="https://yachaytech.edu.ec/carrera-de-computacion/" target="_blank"
+                        class="accent-link">official Yachay Tech website</a>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer Navigation / Next Section Link -->
+        <div class="next-page-container">
+            <div class="next-label-group">
+                <span class="next-caption">NEXT</span>
+                <a href="schedule.html" class="next-link">See when these actually happen <span class="next-arrow">&rarr;</span></a>
+            </div>
+            <a href="schedule.html" class="btn btn-primary next-button">Schedule</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Created by Kevin Sanchez in Ecuador on August 2026 for Web Applications Course</p>
+    </footer>
+</body>
+
+</html>

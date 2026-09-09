@@ -1,0 +1,427 @@
+/* Extracurricular Page Layout */
+.extracurricular-container {
+    max-width: 1050px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* Header Section */
+.extracurricular-header {
+    margin-bottom: 3.5rem;
+}
+
+.page-subtitle {
+    color: var(--secondary-text, #6e06f2);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1.5rem;
+    font-family: "Oswald", sans-serif;
+}
+
+.page-title {
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: var(--primary-text, #1f2329);
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+    line-height: 1.1;
+}
+
+.page-title span {
+    color: var(--accent-color, #6e06f2);
+}
+
+.lead-text {
+    font-size: 1.2rem;
+    color: var(--secondary-text, #555555);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0;
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 4.5rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary-text, #1f2329);
+    margin: 0 0 2rem 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bullet {
+    color: var(--accent-color, #6e06f2);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Badges */
+.badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    display: inline-block;
+}
+
+.badge-purple {
+    color: #6e06f2;
+    background-color: #f1e8ff;
+}
+
+.badge-gray {
+    color: #666666;
+    background-color: #eeeeee;
+}
+
+/* Roles Grid (3 Columns) */
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.role-card {
+    background-color: #f8f9fc;
+    border: 1px solid #e9ecef;
+    border-radius: 14px;
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-header-with-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.card-logo-box {
+    width: 95px;
+    height: 48px;
+    min-width: 95px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.6rem;
+    overflow: hidden;
+}
+
+.card-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.event-title-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.role-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--primary-text, #1f2329);
+    margin: 0.8rem 0 0.4rem 0;
+    text-align: left;
+}
+
+.role-org {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--secondary-text, #555555);
+    margin: 0 0 1rem 0;
+    line-height: 1.4;
+}
+
+.role-description {
+    font-size: 0.95rem;
+    color: var(--secondary-text, #555555);
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+}
+
+.role-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.role-links .icon-link {
+    color: var(--secondary-text, #555555);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.role-links .icon-link:hover {
+    color: var(--accent-color, #6e06f2);
+    transform: translateY(-2px);
+}
+
+/* Links */
+.accent-link {
+    color: var(--accent-color, #6e06f2);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.accent-link:hover {
+    opacity: 0.85;
+}
+
+/* Events Section Grid (2 Columns) */
+.events-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.events-left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.event-card {
+    background-color: #f8f9fc;
+    border: 1px solid #e9ecef;
+    border-radius: 14px;
+    padding: 1.8rem;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.event-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--primary-text, #1f2329);
+    margin: 0;
+    text-align: left;
+}
+
+.event-description {
+    font-size: 0.98rem;
+    color: var(--secondary-text, #555555);
+    line-height: 1.65;
+    margin: 0 0 1.2rem 0;
+}
+
+.event-link {
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+/* Takeaways Box */
+.takeaways-box {
+    margin-top: 1.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid #edf0f5;
+}
+
+.takeaways-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8892b0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.takeaways-list {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: var(--secondary-text, #555555);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.takeaways-list li {
+    margin-bottom: 0.5rem;
+}
+
+.takeaways-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Every Semester Card (Right Column) */
+.every-semester-card {
+    background-color: #f8f9fc;
+    border: 1px solid #e9ecef;
+    border-radius: 14px;
+    padding: 1.8rem;
+}
+
+.card-header-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8892b0;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.semester-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.semester-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid #edf0f5;
+    font-size: 0.98rem;
+    color: var(--primary-text, #1f2329);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.semester-list li:last-child {
+    border-bottom: none;
+}
+
+.semester-list .num {
+    color: var(--accent-color, #6e06f2);
+    font-weight: 800;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.05rem;
+}
+
+/* Footer Navigation */
+.next-page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.5rem;
+    border-top: 1px solid #eaeaea;
+    margin-top: 4rem;
+}
+
+.next-caption {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #8892b0;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 0.3rem;
+    font-family: "Oswald", sans-serif;
+}
+
+.next-link {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary-text, #1f2329);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.next-link:hover {
+    color: var(--accent-color, #6e06f2);
+}
+
+.next-button {
+    background-color: var(--accent-color, #6e06f2);
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.next-button:hover {
+    background-color: #5904c4;
+    transform: translateY(-2px);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+    .roles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .page-title {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .extracurricular-container {
+        padding: 0 1.25rem;
+        margin: 2rem auto;
+    }
+
+    .page-title {
+        font-size: 2.4rem;
+    }
+
+    .event-card,
+    .every-semester-card,
+    .role-card {
+        padding: 1.4rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Estados (badges) debajo de los títulos en celulares */
+    .event-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .event-title-group {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .card-header-with-logo {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .event-link {
+        word-break: break-all;
+    }
+}
