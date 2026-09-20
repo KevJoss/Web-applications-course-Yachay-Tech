@@ -154,3 +154,132 @@ def delete_customer(
         "message": "Customer deleted",
         "id": customer_id
     }
+
+
+# =========================================================
+# PRODUCT CRUD
+# =========================================================
+
+@app.post(
+    "/products",
+    response_model=schemas.ProductResponse
+)
+def create_product(
+    data: schemas.ProductCreate,
+    db: Session = Depends(get_db)
+):
+
+    product = models.Product(
+        name=data.name,
+        price=data.price,
+        stock=data.stock
+    )
+
+    db.add(product)
+    db.commit()
+    db.refresh(product)
+
+    return product
+
+
+@app.get(
+    "/products",
+    response_model=list[schemas.ProductResponse]
+)
+def list_products(
+    db: Session = Depends(get_db)
+):
+
+    result = db.execute(
+        select(models.Product)
+    )
+
+    return result.scalars().all()
+
+
+@app.get(
+    "/products/{product_id}",
+    response_model=schemas.ProductResponse
+)
+def get_product(
+    product_id: int,
+    db: Session = Depends(get_db)
+):
+
+    product = db.get(
+        models.Product,
+        product_id
+    )
+
+    if product is None:
+
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found"
+        )
+
+    return product
+
+
+@app.put(
+    "/products/{product_id}",
+    response_model=schemas.ProductResponse
+)
+def update_product(
+    product_id: int,
+    data: schemas.ProductUpdate,
+    db: Session = Depends(get_db)
+):
+
+    product = db.get(
+        models.Product,
+        product_id
+    )
+
+    if product is None:
+
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found"
+        )
+
+    if data.name is not None:
+        product.name = data.name
+
+    if data.price is not None:
+        product.price = data.price
+
+    if data.stock is not None:
+        product.stock = data.stock
+
+    db.commit()
+    db.refresh(product)
+
+    return product
+
+
+@app.delete("/products/{product_id}")
+def delete_product(
+    product_id: int,
+    db: Session = Depends(get_db)
+):
+
+    product = db.get(
+        models.Product,
+        product_id
+    )
+
+    if product is None:
+
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found"
+        )
+
+    db.delete(product)
+    db.commit()
+
+    return {
+        "message": "Product deleted",
+        "id": product_id
+    }

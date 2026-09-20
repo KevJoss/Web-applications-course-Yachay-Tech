@@ -168,11 +168,35 @@ def get_customer(id: int, db: Session = Depends(get_db)):
 
 ### Current endpoints
 
+#### Health check
+
 | Method | Path | Description |
 |--------|------|-------------|
 | `GET`  | `/`  | Health check — returns `{"message": "ORM Workshop API"}` |
 
-> More endpoints will be added here as the workshop progresses.
+#### Customers (`/customers`)
+
+| Method   | Path                      | Request body            | Response                   | Description                          |
+|----------|---------------------------|-------------------------|----------------------------|--------------------------------------|
+| `POST`   | `/customers`              | `CustomerCreate`        | `CustomerResponse`         | Creates a new customer               |
+| `GET`    | `/customers`              | —                       | `list[CustomerResponse]`   | Returns all customers                |
+| `GET`    | `/customers/{id}`         | —                       | `CustomerResponse`         | Returns a single customer by ID      |
+| `PUT`    | `/customers/{id}`         | `CustomerUpdate`        | `CustomerResponse`         | Partially updates a customer (name and/or email) |
+| `DELETE` | `/customers/{id}`         | —                       | `{"message": ..., "id": ...}` | Deletes a customer by ID          |
+
+> **404 behaviour:** `GET`, `PUT`, and `DELETE` by ID raise `HTTP 404 – Customer not found` if the customer does not exist.
+
+#### Products (`/products`)
+
+| Method   | Path                    | Request body      | Response                      | Description                              |
+|----------|-------------------------|-------------------|-------------------------------|------------------------------------------|
+| `POST`   | `/products`             | `ProductCreate`   | `ProductResponse`             | Creates a new product                    |
+| `GET`    | `/products`             | —                 | `list[ProductResponse]`       | Returns all products                     |
+| `GET`    | `/products/{id}`        | —                 | `ProductResponse`             | Returns a single product by ID           |
+| `PUT`    | `/products/{id}`        | `ProductUpdate`   | `ProductResponse`             | Partially updates a product (name, price and/or stock) |
+| `DELETE` | `/products/{id}`        | —                 | `{"message": ..., "id": ...}` | Deletes a product by ID                  |
+
+> **404 behaviour:** `GET`, `PUT`, and `DELETE` by ID raise `HTTP 404 – Product not found` if the product does not exist.
 
 ### Running the server
 
