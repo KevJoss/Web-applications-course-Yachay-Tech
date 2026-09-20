@@ -198,6 +198,32 @@ def get_customer(id: int, db: Session = Depends(get_db)):
 
 > **404 behaviour:** `GET`, `PUT`, and `DELETE` by ID raise `HTTP 404 – Product not found` if the product does not exist.
 
+#### Orders (`/orders`)
+
+| Method | Path      | Request body   | Response        | Description                                        |
+|--------|-----------|----------------|-----------------|----------------------------------------------------|
+| `POST` | `/orders` | `OrderCreate`  | `OrderResponse` | Creates a new order with one or more items         |
+
+**Request body — `OrderCreate`:**
+
+```json
+{
+  "customer_id": 1,
+  "items": [
+    { "product_id": 3, "quantity": 2 },
+    { "product_id": 7, "quantity": 1 }
+  ]
+}
+```
+
+**Nested insert behaviour:**
+
+1. Validates that `customer_id` exists → `404 – Customer not found` if not.
+2. For each item in `items`, validates that `product_id` exists → `404 – Product not found` if not.
+3. Captures `unit_price` from `product.price` **at the time of the request** (price snapshot).
+4. Appends each `OrderItem` to the `Order` and persists everything in a single `db.commit()`.
+5. Returns the full order with nested `customer` and `items[].product` via `OrderResponse`.
+
 ### Running the server
 
 From the **project root** (`workshop-4-ORM/`) with the virtual environment active:

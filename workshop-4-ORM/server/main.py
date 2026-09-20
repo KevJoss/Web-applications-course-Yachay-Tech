@@ -283,3 +283,62 @@ def delete_product(
         "message": "Product deleted",
         "id": product_id
     }
+
+
+# =========================================================
+# ORDER - NESTED INSERT
+# =========================================================
+
+@app.post(
+    "/orders",
+    response_model=schemas.OrderResponse
+)
+def create_order(
+    data: schemas.OrderCreate,
+    db: Session = Depends(get_db)
+):
+
+    customer = db.get(
+        models.Customer,
+        data.customer_id
+    )
+
+    if customer is None:
+
+        raise HTTPException(
+            status_code=404,
+            detail="Customer not found"
+        )
+
+    order = models.Order(
+        customer=customer,
+        status="pending"
+    )
+
+    for item_data in data.items:
+
+        product = db.get(
+            models.Product,
+            item_data.product_id
+        )
+
+        if product is None:
+
+            raise HTTPException(
+                status_code=404,
+                detail="Product not found"
+            )
+
+        item = models.OrderItem(
+            product=product,
+            quantity=item_data.quantity,
+            unit_price=product.price
+        )
+
+        order.items.append(item)
+
+    db.add(order)
+    db.commit()
+    db.refresh(order)
+
+    return order
